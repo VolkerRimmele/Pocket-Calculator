@@ -1,0 +1,46 @@
+﻿<Window x:Class="Taschenrechner_Volker_Rimmele_in_WPF_18_10_23.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Taschenrechner_Volker_Rimmele_in_WPF_18_10_23"
+        mc:Ignorable="d" Height="437" Width="806" ResizeMode="CanResizeWithGrip" Topmost="True" Title="Taschenrechner" SizeToContent="WidthAndHeight">
+    <UniformGrid Height="440" Margin="0,0,32,0" >
+        <Grid x:Name="TaschenRechner" Height="420" Width="793">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="0*"/>
+                <RowDefinition Height="0*"/>
+                <RowDefinition Height="0*"/>
+                <RowDefinition Height="0*"/>
+            </Grid.RowDefinitions>
+
+            <TextBox x:Name="txtBox_Eingabe" HorizontalAlignment="Left" Margin="47,40,0,0" TextWrapping="Wrap" Text="Eingabe" VerticalAlignment="Top" Width="162" Height="18" />
+            <TextBox x:Name="txtBox_Ausgabe" HorizontalAlignment="Left" Margin="47,112,0,0" TextWrapping="Wrap" Text="Ausgabe" VerticalAlignment="Top" Width="162" Height="18"/>
+            <Button x:Name="btn_Plus" Content="+" HorizontalAlignment="Left" Margin="694,276,0,0" VerticalAlignment="Top" IsDefault="True" Width="57" Height="43" Click="btn_Click" RenderTransformOrigin="0.571,0.765"/>
+            <Button x:Name="btn_Minus" Content="-" HorizontalAlignment="Left" Margin="694,195,0,0" VerticalAlignment="Top" IsDefault="True" Width="57" Height="43" RenderTransformOrigin="2.108,0.412" Click="btn_Click" FontSize="20"/>
+            <Button x:Name="btn_Mal" Content="*" HorizontalAlignment="Left" Margin="694,112,0,0" VerticalAlignment="Top" IsDefault="True" Width="57" Height="43" RenderTransformOrigin="2.108,0.412" AutomationProperties.Name="*" Click="btn_Click" FontSize="20"/>
+            <Button x:Name="btn_Geteilt" Content="/" HorizontalAlignment="Left" Margin="694,36,0,0" VerticalAlignment="Top" IsDefault="True" Width="57" Height="43" RenderTransformOrigin="2.108,0.412" Click="btn_Click"/>
+            <Button x:Name="btn_Drei" Content="3" HorizontalAlignment="Left" Margin="546,276,0,0" VerticalAlignment="Top" IsDefault="True" Width="57" Height="43" Click="btn_Click" RenderTransformOrigin="0.571,0.765"/>
+            <Button x:Name="btn_Sechs" Content="6" HorizontalAlignment="Left" Margin="546,195,0,0" VerticalAlignment="Top" IsDefault="True" Width="57" Height="43" RenderTransformOrigin="2.108,0.412" Click="btn_Click"/>
+            <Button x:Name="btn_Neun" Content="9" HorizontalAlignment="Left" Margin="546,112,0,0" VerticalAlignment="Top" IsDefault="True" Width="57" Height="42" RenderTransformOrigin="2.108,0.412" AutomationProperties.Name="*" Click="btn_Click"/>
+            <Button x:Name="btn_Zwei" Content="2" HorizontalAlignment="Left" Margin="404,276,0,0" VerticalAlignment="Top" IsDefault="True" Width="57" Height="43" Click="btn_Click" RenderTransformOrigin="0.571,0.765" IsCancel="True"/>
+            <Button x:Name="btn_Fuenf" Content="5" HorizontalAlignment="Left" Margin="404,195,0,0" VerticalAlignment="Top" IsDefault="True" Width="57" Height="43" RenderTransformOrigin="2.108,0.412" Click="btn_Click"/>
+            <Button x:Name="btn_Acht" Content="8" HorizontalAlignment="Left" Margin="404,112,0,0" VerticalAlignment="Top" IsDefault="True" Width="57" Height="43" RenderTransformOrigin="2.108,0.412" AutomationProperties.Name="*" Click="btn_Click"/>
+            <Button x:Name="btn_Eins" Content="1" HorizontalAlignment="Left" Margin="259,276,0,0" VerticalAlignment="Top" IsDefault="True" Width="57" Height="43" Click="btn_Click" RenderTransformOrigin="0.571,0.765" IsCancel="True"/>
+            <Button x:Name="btn_Sieben" Content="7" HorizontalAlignment="Left" Margin="259,112,0,0" VerticalAlignment="Top" IsDefault="True" Width="57" Height="43" RenderTransformOrigin="2.108,0.412" AutomationProperties.Name="*" Click="btn_Click"/>
+            <Button x:Name="btn_Vier" Content="4" HorizontalAlignment="Left" Margin="259,195,0,0" VerticalAlignment="Top" IsDefault="True" Width="57" Height="43" RenderTransformOrigin="2.108,0.412" AutomationProperties.Name="*" Click="btn_Click"/>
+            <Button x:Name="btn_Null" Content="0" HorizontalAlignment="Left" Margin="259,346,0,0" VerticalAlignment="Top" IsDefault="True" Width="57" Height="43" Click="btn_Click" RenderTransformOrigin="0.571,0.765" IsCancel="True"/>
+            <Button x:Name="btn_Komma" Content="," HorizontalAlignment="Left" Margin="546,346,0,0" VerticalAlignment="Top" IsDefault="True" Width="57" Height="43" Click="btn_Click" RenderTransformOrigin="0.419,2.561"/>
+            <Button x:Name="btn_Gleich" Content="=" HorizontalAlignment="Left" Margin="694,346,0,0" VerticalAlignment="Top" IsDefault="True" Width="57" Height="43" Click="btn_Click_Gleich" RenderTransformOrigin="0.419,2.561"/>
+            <Button x:Name="btn_CE" Content="CE" HorizontalAlignment="Left" Margin="546,36,0,0" VerticalAlignment="Top" Height="43" Width="57" Click="btn_CE_Click"/>
+            <Button x:Name="btn_C" Content="C" HorizontalAlignment="Left" Margin="404,36,0,0" VerticalAlignment="Top" Height="43" Width="57" Click="btn_C_Click"/>
+            <Button x:Name="btn_Prozent" HorizontalAlignment="Left" VerticalAlignment="Top" Content="%" Height="43" Width="57" Click="btn_Prozent_Click" Margin="259,36,0,0"/>
+            <Button x:Name="btn_PlusMinus" HorizontalAlignment="Left" Margin="404,346,0,0" VerticalAlignment="Top" Height="43" Width="57" Click="btn_PlusMinus_Click" Content="+/-"/>
+            <Button x:Name="btn_Quadrat" Content="x²" HorizontalAlignment="Left" Margin="128,195,0,0" VerticalAlignment="Top" Height="43" Width="57" Click="btn_Quadrat_Click" FontSize="20" RenderTransformOrigin="1.145,0.677"/>
+            <Button x:Name="btn_Wurzel" Content="√" HorizontalAlignment="Left" Margin="128,276,0,0" VerticalAlignment="Top" Height="43" Width="57" Click="btn_Wurzel_Click" FontSize="20"/>
+            <Button x:Name="btn_geteiltDurchX" Content="1/x" HorizontalAlignment="Left" Margin="128,346,0,0" VerticalAlignment="Top" Height="43" Width="57" Click="btn_geteiltDurchX_Click"/>
+
+        </Grid>
+    </UniformGrid>
+</Window>
